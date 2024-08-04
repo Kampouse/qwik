@@ -59,12 +59,22 @@ bun run qwik add auth
 ```
 </span>
 </PackageManagerTabs>
+After running the above command make sure 
+your  `vite.config.ts` contain the following
+
+```
+  optimizeDeps: {
+      include: ['@auth/core'],
+}
+```
+
+
 
 This command will add a new package:
 
 - `@auth/qwik`
 
-and create a new file named `plugin@auth.ts` with an example configuration.
+
 
 > **Note on Manual Deployments with Node**
 
