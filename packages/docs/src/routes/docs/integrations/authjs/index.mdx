@@ -66,6 +66,15 @@ This command will add a new package:
 
 and create a new file named `plugin@auth.ts` with an example configuration.
 
+inside of your  `vite.config.ts` you should manualy add
+```
+  optimizeDeps: {
+      include: ['@auth/core'],
+}
+```
+
+
+
 > **Note on Manual Deployments with Node**
 
 > When deploying applications manually using Node.js, particularly with frameworks like Express, the server or Node process does not inherently know if it's being served under HTTP or HTTPS. 
@@ -106,8 +115,6 @@ When migrating from `@builder.io/qwik-auth` to `@auth/qwik`, there are a couple 
     +export const { onRequest, useSession, useSignIn, useSignOut } = 
     +  QwikAuth$(({ env }) => ({
    ```
-
-
 
 ## Qwik API
 
